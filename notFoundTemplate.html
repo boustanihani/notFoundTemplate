@@ -1,11 +1,24 @@
 <template name="defaultLayout">
   <h3>Default Layout</h3>
   <div style="border:solid;padding:1em">{{> yield}}</div>
+  <br>
+  <div style="border:solid;padding:1em">
+    <h3>Region 1</h3>
+    {{> yield 'region1'}}
+  </div>
+</template>
+
+<template name="putInRegion1">
+  <h4>Region 1 Content</h4>
+  <h4 style="color:red">Empty when called directly if route-notfound!</h4>
 </template>
 
 <template name="notFoundTemplate">
   <h3>Page not found!</h3>
-  <h4 style="color:red">Layout gone when reloaded or called directly!</h4>
+</template>
+
+<template name="loadingTemplate">
+  <h3>Loading...</h3>
 </template>
 
 <template name="home">
