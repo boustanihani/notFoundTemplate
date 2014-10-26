@@ -1,0 +1,15 @@
+<template name="defaultLayout">
+  <h3>Default Layout</h3>
+  <div style="border:solid;padding:1em">{{> yield}}</div>
+</template>
+
+<template name="notFoundTemplate">
+  <h3>Page not found!</h3>
+  <h4 style="color:red">Layout gone when reloaded or called directly!</h4>
+</template>
+
+<template name="home">
+  <h4>Home</h4>
+  Goto:&nbsp;
+  <a href="/notfound">notfound</a>
+</template>
